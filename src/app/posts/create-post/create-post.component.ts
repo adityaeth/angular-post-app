@@ -9,12 +9,15 @@ import { Post } from '../post.model';
 export class CreatePostComponent implements OnInit {
   enteredTitle = '';
   enteredContent = '';
-  @Output() postCreated = new EventEmitter();
+  @Output() postCreated = new EventEmitter<Post>();
   constructor() {}
 
   ngOnInit(): void {}
   onAddPost() {
-    const post: Post[] = [];
+    const post: Post = {
+      title: this.enteredTitle,
+      content: this.enteredContent,
+    };
     this.postCreated.emit(post);
   }
 }
