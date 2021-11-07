@@ -1,4 +1,4 @@
-<br />
+<br>
 <mat-accordion multi="true" *ngIf="posts.length > 0">
   <mat-expansion-panel *ngFor="let post of posts">
     <mat-expansion-panel-header>
@@ -11,4 +11,4 @@
     </mat-action-row>
   </mat-expansion-panel>
 </mat-accordion>
-<p class="noCont" *ngIf="posts.length <= 0">No Content!</p>
+<p class="noCont" *ngIf="posts.length <= 0"><br> No Posts Yet, Create your First Post!</p>
