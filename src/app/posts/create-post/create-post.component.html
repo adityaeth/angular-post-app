@@ -10,7 +10,11 @@
         ngModel
         required
         minlength="3"
+        #title="ngModel"
       />
+      <mat-error *ngIf="title.invalid"
+        >Please Enter a title > 3 letters.</mat-error
+      >
     </mat-form-field>
     <mat-form-field class="example-full-width" appearance="fill">
       <mat-label>Summary</mat-label>
@@ -22,6 +26,7 @@
         ngModel
         required
       ></textarea>
+      <mat-error *ngIf="title.invalid">Please Enter a description.</mat-error>
       <button mat-raised-button color="primary" type="submit">Post</button>
     </mat-form-field>
   </form>
