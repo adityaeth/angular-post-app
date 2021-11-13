@@ -13,7 +13,7 @@ export class PostsService {
   getPosts() {
     this.http
       .get<{ message: String; posts: Post[] }>(
-        'https://localhost:3000/api/hosts'
+        'https://localhost:3000/api/posts'
       )
       .subscribe((postData) => {
         this.posts = postData.posts;
