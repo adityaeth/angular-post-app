@@ -13,12 +13,6 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use((req, res) => {
-  res.json({
-    message: "works"
-  });
-});
-
 app.use('/api/posts', (req, res, next) => {
   const posts = [
     {
