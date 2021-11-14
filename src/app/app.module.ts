@@ -15,7 +15,6 @@ import { CreatePostComponent } from './posts/create-post/create-post.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
 import { ListPostComponent } from './posts/list-post/list-post.component';
-import { PostsComponent } from './posts/posts.component';
 import { PostsService } from './posts/posts.service';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -24,7 +23,6 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     CreatePostComponent,
     HeaderComponent,
-    PostsComponent,
     ListPostComponent,
   ],
   imports: [
@@ -38,7 +36,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatToolbarModule,
     MatIconModule,
     MatExpansionModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [PostsService],
   bootstrap: [AppComponent],
