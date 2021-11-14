@@ -13,7 +13,7 @@ export class PostsService {
   getPosts() {
     this.http
       .get<{ message: String; posts: Post[] }>(
-        'https://localhost:3000/api/posts'
+        'http://localhost:3000/api/posts'
       )
       .subscribe((postData) => {
         this.posts = postData.posts;
@@ -27,7 +27,7 @@ export class PostsService {
 
   addPost(title: String, content: String) {
     const post: Post = {
-      id: "123",
+      id: '123',
       title: title,
       content: content,
     };
